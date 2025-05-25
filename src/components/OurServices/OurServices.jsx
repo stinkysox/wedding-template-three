@@ -1,18 +1,20 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./OurServices.css";
+
 const OurServices = () => {
   const services = [
     {
       id: 1,
       title: "Still Photography",
       description:
-        "Our luxury photography and videography services capture your wedding with exquisite detail, creating a timeless film for you to relive your special day whenever you desire. At cupido we believe in preserving precious memories lifetime.",
+        "Our luxury photography and videography services capture your wedding with exquisite detail, creating a timeless film for you to relive your special day whenever you desire. At Cupido we believe in preserving precious memories lifetime.",
     },
     {
       id: 2,
       title: "Wedding Videography",
       description:
-        "Your wedding day, a cherished memory,a tale of love and joy for eternity. Our lens shall capture each fleeting moment,and weave them into a timeless component.Let us immortalize your special day,with our expert videography services.",
+        "Your wedding day, a cherished memory, a tale of love and joy for eternity. Our lens shall capture each fleeting moment and weave them into a timeless component. Let us immortalize your special day with our expert videography services.",
     },
     {
       id: 3,
@@ -53,7 +55,12 @@ const OurServices = () => {
   );
 
   return (
-    <section className="our-services">
+    <motion.section
+      className="our-services"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <div className="container">
         {/* Header */}
         <div className="header">
@@ -64,17 +71,27 @@ const OurServices = () => {
         {/* Services Grid */}
         <div className="services-grid">
           {services.map((service) => (
-            <div key={service.id} className="service-card">
+            <motion.div
+              key={service.id}
+              className="service-card"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: service.id * 0.2,
+              }}
+            >
               <div className="service-icon">
                 <ArrowIcon />
               </div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
