@@ -1,0 +1,45 @@
+.testimonial-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: "Georgia", serif;
+  height: 60vh;
+}
+
+.testimonial-subtitle {
+  color: #c9b78f;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.testimonial-icon {
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: #d4c1a5;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #5c5c5c;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2e2e2e;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #8e8e8e;
+}

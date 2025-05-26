@@ -48,7 +48,19 @@
   padding: 20px 40px;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar.scrolled {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* You can change this to white or any color */
+  backdrop-filter: blur(10px);
 }
 
 /* Logo Styles */
@@ -164,6 +176,39 @@
 .mobile-menu.open .menu-item {
   transform: translateX(0);
   opacity: 1;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: #f0f0f0;
+  transform: translateX(10px);
+}
+
+.menu-item a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.menu-item a:hover::after {
+  width: 100%;
 }
 
 .menu-item:nth-child(1) {
