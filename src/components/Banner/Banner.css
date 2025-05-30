@@ -28,7 +28,7 @@
   overflow: hidden;
   border-radius: 150px;
   border-bottom-left-radius: 2px; /* Makes the top & bottom curved */
-  border-bottom-right-radius: 0px; /* Makes the top & bottom curved */
+  border-bottom-right-radius:2dpx; /* Makes the top & bottom curved */
 }
 
 .banner-image {

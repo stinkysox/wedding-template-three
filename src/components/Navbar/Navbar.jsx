@@ -14,11 +14,19 @@ const Navbar = () => {
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=600&fit=crop",
   ];
 
-  const menuItems = ["Home", "Portfolio", "About", "Services", "Contact"];
+  const menuItems = [
+    "Home",
+    "About",
+    "Portfolio",
+    "Wedding Albums",
+    "Services",
+    "Contact",
+  ];
 
   const handleMenuClick = (item) => {
     const route =
       item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
+
     navigate(route);
     setIsMenuOpen(false);
   };
