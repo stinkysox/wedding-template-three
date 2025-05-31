@@ -9,9 +9,11 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const images = [
-    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=600&fit=crop",
+    "https://i.pinimg.com/736x/12/45/70/124570cb15e2fa0215ba74111f7b6685.jpg",
+    "https://i.pinimg.com/736x/91/0c/c1/910cc18c356da058c2e248d3b8d0ff6a.jpg",
+    "https://i.pinimg.com/736x/50/36/08/50360859203a51e5de8e30e934ab856d.jpg",
+    "https://i.pinimg.com/736x/55/a0/42/55a042ffebaf73b4367b0e78f3c5b08e.jpg",
+    "https://i.pinimg.com/736x/2d/b5/64/2db5642cf4c34f3d422cb9172b9873c5.jpg",
   ];
 
   const menuItems = [

@@ -13,7 +13,7 @@ const WeddingAlbums = () => {
       title: "Swetha & Pratik",
       date: "September 30, 2023",
       coverImage:
-        "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop",
+        "https://i.pinimg.com/736x/9e/91/eb/9e91eb85f896212dccaf39f0682c985c.jpg",
       images: [
         "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&h=600&fit=crop",
@@ -27,7 +27,7 @@ const WeddingAlbums = () => {
       title: "Swati & Abhishek",
       date: "April 9, 2023",
       coverImage:
-        "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&h=600&fit=crop",
+        "https://i.pinimg.com/736x/ce/6b/62/ce6b6223b7d05a05b1432e7d71d1177d.jpg",
       images: [
         "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",

@@ -8,43 +8,43 @@ const HomeGallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop",
+      src: "https://i.pinimg.com/736x/8a/aa/a7/8aaaa71dcaa9e82be9f9b4860b72e23b.jpg",
       alt: "Wedding couple portrait",
       size: "medium",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&h=1000&fit=crop",
+      src: "https://i.pinimg.com/736x/4f/f9/0d/4ff90d6f8cb055e0a2b7a2a2ea66c43b.jpg",
       alt: "Wedding ceremony",
       size: "tall",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=600&fit=crop",
+      src: "https://i.pinimg.com/736x/63/23/28/632328d4643f0b06d585e0c62ab1d11e.jpg",
       alt: "Wedding party",
       size: "medium",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&h=800&fit=crop",
+      src: "https://i.pinimg.com/736x/63/e3/d2/63e3d23b4e8fab213aaabbef595d6009.jpg",
       alt: "Bridesmaids",
       size: "square",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&h=600&fit=crop",
+      src: "https://i.pinimg.com/736x/ec/3b/66/ec3b668c49e226258c2a7657de83e6fc.jpg",
       alt: "Wedding couple intimate moment",
       size: "medium",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&h=1000&fit=crop",
+      src: "https://i.pinimg.com/736x/ff/8b/2e/ff8b2ecaf1c685969de67635b751862c.jpg",
       alt: "Bride portrait",
       size: "tall",
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop",
+      src: "https://i.pinimg.com/736x/94/f0/2c/94f02c122b1e17f4d2f427536c4bd484.jpg",
       alt: "Wedding celebration",
       size: "medium",
     },
@@ -62,38 +62,19 @@ const HomeGallery = () => {
     setTimeout(() => setSelectedImage(null), 300);
   };
 
-  const navigateImage = (direction) => {
-    const currentIndex = galleryImages.findIndex(
-      (img) => img.id === selectedImage.id
-    );
-    let newIndex;
-
-    if (direction === "next") {
-      newIndex = (currentIndex + 1) % galleryImages.length;
-    } else {
-      newIndex =
-        (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    }
-
-    setSelectedImage(galleryImages[newIndex]);
-  };
-
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (!isModalOpen) return;
 
       if (e.key === "Escape") {
         closeModal();
-      } else if (e.key === "ArrowRight") {
-        navigateImage("next");
-      } else if (e.key === "ArrowLeft") {
-        navigateImage("prev");
       }
+      // Arrow key navigation removed
     };
 
     document.addEventListener("keydown", handleKeyPress);
     return () => document.removeEventListener("keydown", handleKeyPress);
-  }, [isModalOpen, selectedImage]);
+  }, [isModalOpen]);
 
   return (
     <>
@@ -126,48 +107,7 @@ const HomeGallery = () => {
           onClick={closeModal}
         >
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            {/* Close Button */}
-            <button className="modal-close" onClick={closeModal}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M18 6L6 18M6 6L18 18"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
-
-            {/* Navigation Arrows */}
-            <button
-              className="modal-nav modal-prev"
-              onClick={() => navigateImage("prev")}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M15 18L9 12L15 6"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-
-            <button
-              className="modal-nav modal-next"
-              onClick={() => navigateImage("next")}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            {/* Close button removed */}
 
             {/* Image */}
             <div className="modal-image-container">
@@ -178,12 +118,7 @@ const HomeGallery = () => {
               />
             </div>
 
-            {/* Image Counter */}
-            <div className="modal-counter">
-              {galleryImages.findIndex((img) => img.id === selectedImage.id) +
-                1}{" "}
-              / {galleryImages.length}
-            </div>
+            {/* Image counter removed */}
           </div>
         </div>
       )}

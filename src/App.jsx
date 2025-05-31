@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
 import WeddingAlbums from "./components/WeddingAlbums/WeddingAlbums";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Gallery from "./components/Gallery/Gallery";
+import Services from "./components/Services/Services";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/about" element={<Banner />} />
         <Route path="/Wedding Albums" element={<WeddingAlbums />} />
         <Route path="/contact" element={<ContactForm />} />
+        <Route path="/portfolio" element={<Gallery />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
     </div>

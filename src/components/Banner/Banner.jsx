@@ -14,7 +14,7 @@ const Banner = () => {
 
         <div className="banner-image-wrapper">
           <img
-            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+            src="https://i.pinimg.com/736x/5f/6d/d3/5f6dd367b5695e9daecf6be8d8cc65e8.jpg"
             alt="Couple smiling"
             className="banner-image"
           />

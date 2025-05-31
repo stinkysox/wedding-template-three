@@ -4,6 +4,7 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import OurServices from "../../components/OurServices/OurServices";
 import HomeGallery from "../../components/HomeGallery/HomeGallery";
 import WeddingVideos from "../../components/WeddingVideos/WeddingVideos";
+import Gallery from "../../components/Gallery/Gallery";
 const Home = () => {
   return (
     <div>
